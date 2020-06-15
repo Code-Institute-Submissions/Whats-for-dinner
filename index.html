@@ -15,22 +15,23 @@
       type="text/css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
   </head>
-
   <body>
-    <header class="no-gutters">
-      <div class="row navbar container-fluid">
+  <!-- Navbar -->
+    <header class="no-gutters container-fluid">
+      <div class="row navbar no-gutters">
         <div class="col-12">
           <ul class="list-inline">
-            <li class="list-inline-item nav-li-item">
-              Choose your dinner now!
+            <a href="#"><li class="list-inline-item nav-li-item">
+              Choose your dinnerR now!
+            </li></a>
+            <a href="#"><li class="list-inline-item nav-li-item ">Choose the Country</li></a>
+            <a href="#"><li class="list-inline-item nav-li-item">
+              Choose where you are gonna eat
             </li>
-            <li class="list-inline-item nav-li-item">Choose the Country</li>
-            <li class="list-inline-item nav-li-item">
-              ?Choose where you are gonna eat?
-            </li>
-            <li class="list-inline-item nav-li-item">About us</li>
-            <li class="list-inline-item nav-li-item">Log in/Sign Up</li>
+            <a href="#"><li class="list-inline-item nav-li-item">About us</li></a>
+            <a href="#"><li class="list-inline-item nav-li-item">Log in/Sign Up</li></a>
           </ul>
         </div>
       </div>
@@ -39,6 +40,101 @@
       <div class="row">
         <div class="col-12">
           <h1 class="center">What is for dinner?</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4">
+            <div class="row">
+            <div class="col-4 text-column center">Chinese</div>
+            <div class="col-8 button-collumn">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider round"></span>
+                   </label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-4 text-column center">Turkish</div>
+            <div class="col-8 button-collumn">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider round"></span>
+                   </label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-4 text-column center">Italian</div>
+            <div class="col-8 button-collumn">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider round"></span>
+                   </label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-4 text-column center">Indonesian</div>
+            <div class="col-8 button-collumn">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider round"></span>
+                   </label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-4 text-column center">Dutch</div>
+            <div class="col-8 button-collumn">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider round"></span>
+                   </label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-4 text-column center">Vegan</div>
+            <div class="col-8 button-collumn">
+                <label class="switch">
+                    <input type="checkbox">
+                        <span class="slider round"></span>
+                   </label>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-4 text-column center">Choose Wisely</div>
+            <div class="col-8 button-collumn">
+                    <select name="health" id="healthSelector">
+                        <option value="healthy">Healthy</option>
+                        <option value="kind-of-healthy">Kind of healthy</option>
+                        <option value="obese">Obese</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-4 text-column center">Persons</div>
+            <div class="col-8 button-collumn">
+                    <select name="amount-of-persons" id="amountOfPersons">
+                        <option value="1person">1</option>
+                        <option value="2persons">2</option>
+                        <option value="3persons">3</option>
+                        <option value="4persons">4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-4 text-column center">Time Available</div>
+            <div class="col-8 button-collumn">
+                    <select name="time" id="timeAvailable">
+                        <option value="15min">15min</option>
+                        <option value="30min">30min</option>
+                        <option value="enoughTime">I have enough time</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+            <input class="center" type="submit" name="submit-button" id="submitButton">
+            </div>
+        </div>
+        <div class="col-8">
+            <div></div>
         </div>
       </div>
     </main>
