@@ -1,39 +1,53 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+Whats for dinner?
+Have you ever been in a position that its time to go eat but you have no idea what to eat? well think no more and let the website choice a dish for you. If you want the website can find a restaurant near your current location aswell!
 
-Welcome flups10,
+UX
+This site is pretty straight forward, this site helps you to choice what your gonna eat for any user anywhere who has acces to the internet and money to buy food.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+- Usertype 1 :  Wants to decide what he is gonna eat for dinner. After the user selects some buttons he can click the submit button until satisfied with his dish
+- Usertype 2 : This user wants to decide what to eat and where to eat. So he presses the buttons to decide what to eat, and if he scrolls down a bit or clicks on the navbar "where am I gonna eat" he should see a nearly full screen maps with all the restaurants marked for the current Dish
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+Features
+Existing Features
 
-A blue button should appear to click: *Make Public*,
+Feature 1:  The abillty to select some countrys kitchens and get a random dish for the country.
+Feature 2: Find a restaurant for your random selected Dish on the google maps map.
+Feature 3: Navigation from a button
 
-Another blue button should appear to click: *Open Browser*.
+Future Features
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Create an own account and save preferences
 
-A blue button should appear to click: *Make Public*,
+choose between your own custom dishes and save them to your account
 
-Another blue button should appear to click: *Open Browser*.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+Technologys used: 
 
-## Updates Since The Instructional Video
+Jquery
+Bootstrap
+Google Maps API
+Google Places
+Google Marker Cluster
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Testing
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Code testing
+I fixed mulitple missing ) and ; right away 
+I used Console.log command and debugger for multiple things:
+ - to check if my buttons extended myObj properly
+ - to check if my randomdish is a random dish of myObj
+- to check what my results from google maps where when I searched for restaurants
+I checked no buttons and see if the code says you need to check a button.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Credits
 
---------
+The dropdown button in the nav is from Matt Rudge
+CSS The toggle switch was taken from w3schools
 
-Happy coding!
+Media: 
+All Pictures in this site were take from pexels.com
+

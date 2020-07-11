@@ -1,142 +1,237 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Whats for dinner?</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-  </head>
-  <body>
+
+<head>
+  <title>Whats for dinner?</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="assets/js/jQuery.js"></script>
+</head>
+
+<body>
   <!-- Navbar -->
-    <header class="no-gutters container-fluid">
-      <div class="row navbar no-gutters">
-        <div class="col-12">
-          <ul class="list-inline">
-            <a href="#"><li class="list-inline-item nav-li-item">
-              Choose your dinnerR now!
-            </li></a>
-            <a href="#"><li class="list-inline-item nav-li-item ">Choose the Country</li></a>
-            <a href="#"><li class="list-inline-item nav-li-item">
+  <nav class="no-gutters">
+    <div class="row navbar no-gutters">
+      <div class="col-12">
+        <ul class="list-inline">
+          <a href="#">
+            <li class="list-inline-item nav-li-item">
+              Choose your dinner now!
+            </li>
+          </a>
+          <a href="#">
+            <li class="list-inline-item nav-li-item ">Choose the Country</li>
+          </a>
+          <a href="#">
+            <li class="list-inline-item nav-li-item">
               Choose where you are gonna eat
             </li>
-            <a href="#"><li class="list-inline-item nav-li-item">About us</li></a>
-            <a href="#"><li class="list-inline-item nav-li-item">Log in/Sign Up</li></a>
-          </ul>
-        </div>
+          </a>
+          <a href="#">
+            <li class="list-inline-item nav-li-item">About us</li>
+          </a>
+          <a href="#">
+            <li class="list-inline-item nav-li-item">Log in/Sign Up</li>
+          </a>
+        </ul>
       </div>
-    </header>
-    <main>
-      <div class="row">
-        <div class="col-12">
-          <h1 class="center">What is for dinner?</h1>
-        </div>
+    </div>
+  </nav>
+  <header>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="center">What is for dinner?</h1>
       </div>
-      <div class="row">
-        <div class="col-4">
-            <div class="row">
-            <div class="col-4 text-column center">Chinese</div>
-            <div class="col-8 button-collumn">
-                <label class="switch">
-                    <input type="checkbox">
-                        <span class="slider round"></span>
-                   </label>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-4 text-column center">Turkish</div>
-            <div class="col-8 button-collumn">
-                <label class="switch">
-                    <input type="checkbox">
-                        <span class="slider round"></span>
-                   </label>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-4 text-column center">Italian</div>
-            <div class="col-8 button-collumn">
-                <label class="switch">
-                    <input type="checkbox">
-                        <span class="slider round"></span>
-                   </label>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-4 text-column center">Indonesian</div>
-            <div class="col-8 button-collumn">
-                <label class="switch">
-                    <input type="checkbox">
-                        <span class="slider round"></span>
-                   </label>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-4 text-column center">Dutch</div>
-            <div class="col-8 button-collumn">
-                <label class="switch">
-                    <input type="checkbox">
-                        <span class="slider round"></span>
-                   </label>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-4 text-column center">Vegan</div>
-            <div class="col-8 button-collumn">
-                <label class="switch">
-                    <input type="checkbox">
-                        <span class="slider round"></span>
-                   </label>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-4 text-column center">Choose Wisely</div>
-            <div class="col-8 button-collumn">
-                    <select name="health" id="healthSelector">
-                        <option value="healthy">Healthy</option>
-                        <option value="kind-of-healthy">Kind of healthy</option>
-                        <option value="obese">Obese</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-4 text-column center">Persons</div>
-            <div class="col-8 button-collumn">
-                    <select name="amount-of-persons" id="amountOfPersons">
-                        <option value="1person">1</option>
-                        <option value="2persons">2</option>
-                        <option value="3persons">3</option>
-                        <option value="4persons">4</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-4 text-column center">Time Available</div>
-            <div class="col-8 button-collumn">
-                    <select name="time" id="timeAvailable">
-                        <option value="15min">15min</option>
-                        <option value="30min">30min</option>
-                        <option value="enoughTime">I have enough time</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
+    </div>
+  </header>
+  <main>
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="row">
+          <div class="col-6">
+            <h2 class="buttons-header center">Pick your preferences</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Chinese</div>
+          <div class="col-6 button-collumn">
+            <label class="switch">
+              <input type="checkbox" id="chineseButton">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Turkish</div>
+          <div class="col-6 button-collumn">
+            <label class="switch">
+              <input type="checkbox" id="turkishButton">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Italian</div>
+          <div class="col-6 button-collumn">
+            <label class="switch">
+              <input type="checkbox" id="italianButton">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Indonesian</div>
+          <div class="col-6 button-collumn">
+            <label class="switch">
+              <input type="checkbox" id="indonesianButton">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Dutch</div>
+          <div class="col-6 button-collumn">
+            <label class="switch">
+              <input type="checkbox" id="dutchButton">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Vega</div>
+          <div class="col-6 button-collumn">
+            <label class="switch">
+              <input type="checkbox" id="vegaButton">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Choose Wisely</div>
+          <div class="col-6 button-collumn">
+            <select name="health" id="healthSelector">
+              <option value="healthy">Healthy</option>
+              <option value="kind-of-healthy">Kind of healthy</option>
+              <option value="obese">Obese</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Persons</div>
+          <div class="col-6 button-collumn">
+            <select name="amount-of-persons" id="amountOfPersons">
+              <option value="1person">1</option>
+              <option value="2persons">2</option>
+              <option value="3persons">3</option>
+              <option value="4persons">4</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-column center">Time Available</div>
+          <div class="col-6 button-collumn">
+            <select name="time" id="timeAvailable">
+              <option value="15min">15min</option>
+              <option value="30min">30min</option>
+              <option value="enoughTime">I have enough time</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+          </div>
+          <div class="col-6">
             <input class="center" type="submit" name="submit-button" id="submitButton">
-            </div>
-        </div>
-        <div class="col-8">
-            <div></div>
+          </div>
         </div>
       </div>
-    </main>
-  </body>
+      <div class="col-12 col-lg-6">
+        <div class="row">
+          <div class="col-12">
+            <div class="diner-header">
+              <p>Your dinner will be here shortly.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="diner-image">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="diner-content">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row container-fluid">
+      <div class="col-12">
+        <h2 class="center map-header" id="mapHeader">Where am I gonna eat?</h2>
+        <div id="map">
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script>
+    var map;
+
+
+    function initMap() {
+      var initialLocation;
+      map = new google.maps.Map(document.getElementById('map'));
+
+      navigator.geolocation.getCurrentPosition(function(position) {
+        // Center on user's current location if geolocation prompt allowed
+        var initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        map.setCenter(initialLocation);
+        map.setZoom(13);
+      }, function(positionError) {
+        // User denied geolocation prompt - default to Rotterdam
+        map.setCenter(new google.maps.LatLng(51.919662988, 4.475331432));
+        map.setZoom(5);
+      });
+
+      google.maps.event.addListener(map, 'click', function() {
+        var service;
+        var request = {
+          query: "Chinees",
+          fields: ["name", "geometry"]
+        };
+        service = new google.maps.places.PlacesService(map);
+
+        var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
+
+        service.textSearch(request, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i]);
+            }
+          }
+        });
+
+        function createMarker(place, i) {
+          var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location,
+            label: labels[i % labels.length]
+          });
+
+        }
+      });
+    }
+  </script>
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt8K0B1jfbfag5zy0moUQ0xvyx3R--iqc&libraries=places&callback=initMap" type="text/javascript"></script>
+</body>
+
 </html>

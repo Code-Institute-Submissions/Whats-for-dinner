@@ -3,11 +3,14 @@ body{
     margin: 0px;
 }
 
-.col-12,
-.no-gutters
+.no-gutters,
+.row,
+.col
 {
     padding-left: 0px;
     padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 /*--- Colors ---*/
@@ -30,7 +33,7 @@ a{
     padding: 0px;
 }
 
-ul{
+.list-inline{
     margin: 0px;
     background-color:lightblue;
 }
@@ -41,25 +44,56 @@ ul{
     height: 100px;
     padding-top: 25px;
     text-align: center;
+    font-size: 1.5em;
+}
+/*--- header ---*/
+
+h1{
+  margin-top: 75px;
+  margin-bottom: 150px;
+  font-size: 3em;
 }
 
 /*--- main ---*/
 
-.text-collumn{
-    width: 66%;
+.buttons-header{
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+.text-column{
+  margin-top: 12px;
+  height: 50px;
+  font-size: 1.5em;
 }
 
 .button-collumn{
-    width: 33%;
-}
-.text-column{
-    height: 50px;
+  margin-top: 12px;
 }
 
+/*--- Diner ---*/
 
+.diner-header{
+  height: 100px;
+  font-size: 2em;
+}
+.diner-image{
+  width: inherit;
+  height: auto;
+}
+.no-image
+.diner-content{
+}
+/*--- Map ---*/
 
+.map-header{
+  padding-bottom: 50px;
+  font-size: 2em;
+}
 
-
+div#map {
+  min-height: 90vh;
+}
 
 
 
