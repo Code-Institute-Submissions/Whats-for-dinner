@@ -50,4 +50,3 @@ CSS The toggle switch was taken from w3schools
 
 Media: 
 All Pictures in this site were take from pexels.com
-
