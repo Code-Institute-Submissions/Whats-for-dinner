@@ -1,12 +1,15 @@
-var map;
 
-myObj = {};
-function deleteDishType(myObj, dishType){
+var myObj = {};
+var randomDishObject = {};
+// deletes dishes from the same dishtype
+function deleteDishType(myObj, dishType) {
   delete myObj[dishType + "1"]
   delete myObj[dishType + "2"]
   delete myObj[dishType + "3"]
 }
 
+// this function makes the buttons work when the page is loaded
+// All buttons add or remove data from myObj
 $( document ).ready(function(){
 $("#chineseButton").on("click", function () {
   if ($("#chineseButton").is(":checked")) {
@@ -37,9 +40,7 @@ $("#chineseButton").on("click", function () {
           ingedient1 : "Sliced meat",
           ingedient2 : "Leaf vegetables",
           ingedient3 : "Mushrooms",
-          ingedient4 : "Egg",
-          ingedient5 : "Sliced Potatoes",
-          ingedient6 : "Tofu"
+          ingedient4 : "Egg"
         },
         image : "assets/images/Hotpot.jpg",
         mapsSearch : "Chinese Restaurant"
@@ -62,7 +63,7 @@ $("#turkishButton").on("click", function () {
           ingedient5 : "Tomato",
           ingredient6 : "Sauce of choice(Garlic sause and/or chillypaste recommanded)"
         },
-        image : ""      },
+        mapsSearch : "Turkish Restaurant"      },
       turkishDish2: {
         title : "Döner bun",
         ingredients : {
@@ -70,7 +71,7 @@ $("#turkishButton").on("click", function () {
           ingredient2 : "A bun",
           ingredient3 : "Salad",
         },
-        image : ""      },
+        mapsSearch : "Turkish Restaurant"      },
       turkishDish3: {
         title : "Köfte",
         ingredients : {
@@ -78,7 +79,7 @@ $("#turkishButton").on("click", function () {
           ingredient2 : "Minced meat",
           ingredient3 : "Rice"
         },
-        image : ""      }
+        mapsSearch : "Turkish Restaurant"      }
     });
   } else {
     deleteDishType(myObj, "turkishDish")
@@ -95,7 +96,7 @@ $("#italianButton").on("click", function () {
           ingedient3 : "Cheese",
           ingedient4 : "Other custom ingedients to your liking"
         },
-        image : ""      },
+        mapsSearch : "Italian Restaurant"      },
       italianDish2: {
         title : "Pasta Bolognese",
         ingredients : {
@@ -104,7 +105,7 @@ $("#italianButton").on("click", function () {
           ingedient3 : "Minced meat"
 
         },
-        image : ""      },
+        mapsSearch : "Italian Restaurant"      },
       italianDish3: {
         title : "Pasta Carbonara",
         ingredients : {
@@ -112,7 +113,7 @@ $("#italianButton").on("click", function () {
           ingedient2 : "Cheese",
           ingedient3 : "Bacon"
         },
-        image : ""      }
+        mapsSearch : "Italian Restaurant"      }
     });
   } else {
     deleteDishType(myObj, "italianDish")
@@ -130,7 +131,7 @@ $("#indonesianButton").on("click", function () {
           ingedient4 : "Celdery",
           ingedient5 : "Rice Vermicilli",
         },
-        image : ""
+        mapsSearch : "indonesian Restaurant"
       },
       indonesianDish2: {
         title : "Nasi Goreng",
@@ -142,9 +143,8 @@ $("#indonesianButton").on("click", function () {
           ingredient5 : "tomato",
           ingredient6 : "Cucumber"
         },
-        image : ""
-      },
-      indonesianDish3: "Nasi padang"
+        mapsSearch : "indonesian Restaurant"
+      }
     });
   } else {
     deleteDishType(myObj, "indonesianDish")
@@ -153,39 +153,62 @@ $("#indonesianButton").on("click", function () {
 $("#dutchButton").on("click", function () {
   if ($("#dutchButton").is(":checked")) {
     $.extend(myObj, {
-      dutchDish1: "Boerenkool",
-      dutchDish2: "Kapsalon",
+      dutchDish1: {
+        title : "Boerenkool",
+        ingredients : {
+          ingredient1 : "Rookworst",
+          ingredient2 : "Potato",
+          ingredient3 : "Kale",
+        },
+        mapsSearch : "Dutch Restaurant"
+      },
+      dutchDish2: {
+        title : "Kapsalon",
+        ingredients : {
+          ingredient1 : "Fries",
+          ingredient2 : "Doner",
+          ingredient3 : "Salad",
+          ingredient4 : "Tomato",
+          ingredient5 : "Cheese",
+          ingredient6 : "Garlic Sauce"
+        },
+        mapsSearch : "Dutch Restaurant"
+      },
     });
   } else {
     deleteDishType(myObj, "dutchDish")
   }
 });
-// this extends a random dish in the object to the page when the submit button is clicked
+// this button picks a random dish from myObj and makes the info display on the screen
 $("#submitButton").on("click", function () {
+  // here im getting a random Dish form myObj
   const keys = Object.keys(myObj);
   const randomIndex = Math.floor(Math.random() * keys.length);
   const randomKey = keys[randomIndex];
-  const randomDish = myObj[randomKey];
-  let keyword = randomDish.mapsSearch;
+  let randomDish = myObj[randomKey];
+  $.extend(randomDishObject, randomDish)
+  // this checks if there is a random dish
   if (typeof(randomDish) == "undefined"){
     $(".diner-header, .diner-image, .diner-content").empty()
     $(".diner-header").append(`<h2>Please check a button</h2>`)
   } else {
+    // this is to empty the html div's before adding new content to it
     $(".diner-header, .diner-image, .diner-content").empty()
     $(".diner-header").append(`<h2>${randomDish.title}</h2>`);
-    if (randomDish.image == undefined){
-        $(".diner-image").append(`<div class="no-image"><p>Image was not found</p></div>`);
-    }
-    $(".diner-image").append(`<img src="${randomDish.image}"></img>`);
+    // this checks if there is an image for this dish
+    if (typeof(randomDish.image) == "undefined"){
+        $(".diner-image").append(`<div class="no-image"><p>No image of this dish available</p></div>`);
+    } else {
+    $(".diner-image").append(`<img class="diner-image" src="${randomDish.image}"></img>`);
     $(".diner-content").append(`<h3>Ingredients</h3>`);
-    const keys = Object.keys(randomDish)
+    }
+    // this function makes a list of ingedrients
     let randomDishIngredients = randomDish.ingredients;
     const ingredientsArray = Object.values(randomDishIngredients)
     for (i = 0; i < ingredientsArray.length; i++) {
       $(".diner-content").append(`<li>${ingredientsArray[i]}</li>`);
     }
-    let keyword = randomDish.mapsSearch;
-
     }
 });
+
 })

@@ -1,237 +1,334 @@
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+ <html>
 
-<head>
-  <title>Whats for dinner?</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-  <script src="assets/js/jQuery.js"></script>
-</head>
+ <head>
+   <title>Whats for dinner?</title>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+   <link rel="stylesheet" href="assets/css/style.css" />
+   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+   <script src="assets/js/jQuery.js"></script>
+ </head>
 
-<body>
-  <!-- Navbar -->
-  <nav class="no-gutters">
-    <div class="row navbar no-gutters">
-      <div class="col-12">
-        <ul class="list-inline">
-          <a href="#">
-            <li class="list-inline-item nav-li-item">
-              Choose your dinner now!
-            </li>
-          </a>
-          <a href="#">
-            <li class="list-inline-item nav-li-item ">Choose the Country</li>
-          </a>
-          <a href="#">
-            <li class="list-inline-item nav-li-item">
-              Choose where you are gonna eat
-            </li>
-          </a>
-          <a href="#">
-            <li class="list-inline-item nav-li-item">About us</li>
-          </a>
-          <a href="#">
-            <li class="list-inline-item nav-li-item">Log in/Sign Up</li>
-          </a>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <header>
-    <div class="row">
-      <div class="col-12">
-        <h1 class="center">What is for dinner?</h1>
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <div class="row">
-          <div class="col-6">
-            <h2 class="buttons-header center">Pick your preferences</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Chinese</div>
-          <div class="col-6 button-collumn">
-            <label class="switch">
-              <input type="checkbox" id="chineseButton">
-              <span class="slider round"></span>
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Turkish</div>
-          <div class="col-6 button-collumn">
-            <label class="switch">
-              <input type="checkbox" id="turkishButton">
-              <span class="slider round"></span>
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Italian</div>
-          <div class="col-6 button-collumn">
-            <label class="switch">
-              <input type="checkbox" id="italianButton">
-              <span class="slider round"></span>
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Indonesian</div>
-          <div class="col-6 button-collumn">
-            <label class="switch">
-              <input type="checkbox" id="indonesianButton">
-              <span class="slider round"></span>
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Dutch</div>
-          <div class="col-6 button-collumn">
-            <label class="switch">
-              <input type="checkbox" id="dutchButton">
-              <span class="slider round"></span>
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Vega</div>
-          <div class="col-6 button-collumn">
-            <label class="switch">
-              <input type="checkbox" id="vegaButton">
-              <span class="slider round"></span>
-            </label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Choose Wisely</div>
-          <div class="col-6 button-collumn">
-            <select name="health" id="healthSelector">
-              <option value="healthy">Healthy</option>
-              <option value="kind-of-healthy">Kind of healthy</option>
-              <option value="obese">Obese</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Persons</div>
-          <div class="col-6 button-collumn">
-            <select name="amount-of-persons" id="amountOfPersons">
-              <option value="1person">1</option>
-              <option value="2persons">2</option>
-              <option value="3persons">3</option>
-              <option value="4persons">4</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6 text-column center">Time Available</div>
-          <div class="col-6 button-collumn">
-            <select name="time" id="timeAvailable">
-              <option value="15min">15min</option>
-              <option value="30min">30min</option>
-              <option value="enoughTime">I have enough time</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-          </div>
-          <div class="col-6">
-            <input class="center" type="submit" name="submit-button" id="submitButton">
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="row">
-          <div class="col-12">
-            <div class="diner-header">
-              <p>Your dinner will be here shortly.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="diner-image">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="diner-content">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row container-fluid">
-      <div class="col-12">
-        <h2 class="center map-header" id="mapHeader">Where am I gonna eat?</h2>
-        <div id="map">
+ <body>
+   <!-- Navbar -->
+   <nav class="no-gutters">
+     <div class="row">
+       <div class="col-12">
+         <div class="input-group dropdown-button">
+           <div class="input-group-append dropdown">
+             <button class="btn btn-outline-secondary dropdown-toggle " type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Navigation</button>
+             <div class="dropdown-menu">
+               <a class="dropdown-item" href="#whatsForDinner">Whats for dinner?</a>
+               <a class="dropdown-item" href="#whereAmIGonnaEat">Where am I gonna get dinner?</a>
+               <a class="dropdown-item" href="#chooseTheCountry">Choose the country</a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </nav>
+   <!--- Header -->
+   <header>
+     <div class="row">
+       <div class="col-12">
+         <h1 class="center" id="whatsForDinner">What is for dinner?</h1>
+       </div>
+     </div>
+   </header>
+   <main>
+     <!--- button section -->
+     <div class="row">
+       <div class="col-12 col-lg-6">
+         <div class="row">
+           <div class="col-6">
+             <h2 class="buttons-header center">Pick your preferences</h2>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6 text-column center">Chinese</div>
+           <div class="col-6 button-collumn">
+             <label class="switch">
+               <input type="checkbox" id="chineseButton">
+               <span class="slider round"></span>
+             </label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6 text-column center">Turkish</div>
+           <div class="col-6 button-collumn">
+             <label class="switch">
+               <input type="checkbox" id="turkishButton">
+               <span class="slider round"></span>
+             </label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6 text-column center">Italian</div>
+           <div class="col-6 button-collumn">
+             <label class="switch">
+               <input type="checkbox" id="italianButton">
+               <span class="slider round"></span>
+             </label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6 text-column center">Indonesian</div>
+           <div class="col-6 button-collumn">
+             <label class="switch">
+               <input type="checkbox" id="indonesianButton">
+               <span class="slider round"></span>
+             </label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6 text-column center">Dutch</div>
+           <div class="col-6 button-collumn">
+             <label class="switch">
+               <input type="checkbox" id="dutchButton">
+               <span class="slider round"></span>
+             </label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6 text-column center">Vega</div>
+           <div class="col-6 button-collumn">
+             <label class="switch">
+               <input type="checkbox" id="vegaButton">
+               <span class="slider round"></span>
+             </label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6 text-column center">Choose Wisely</div>
+           <div class="col-6 button-collumn">
+             <select name="health" id="healthSelector">
+               <option value="healthy">Healthy</option>
+               <option value="kind-of-healthy">Kind of healthy</option>
+               <option value="obese">Obese</option>
+             </select>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6 text-column center">Persons</div>
+           <div class="col-6 button-collumn">
+             <select name="amount-of-persons" id="amountOfPersons">
+               <option value="1person">1</option>
+               <option value="2persons">2</option>
+               <option value="3persons">3</option>
+               <option value="4persons">4</option>
+             </select>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-6">
+           </div>
+           <!--- submit button -->
+           <div class="col-6">
+             <input class="center submit-button" type="submit" name="submit-button" id="submitButton">
+           </div>
+         </div>
+       </div>
+       <!--- randomDish generates here -->
+       <div class="col-12 col-lg-6">
+         <div class="row">
+           <div class="col-12">
+             <div class="diner-header">
+               <p>Your dinner will be here shortly.</p>
+             </div>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-12">
+             <div class="diner-image">
+             </div>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-12">
+             <div class="diner-content">
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!--- Google Maps buttons-->
+     <div class="row container-fluid" id="whereAmIGonnaEat">
+       <div class="col-12">
+         <h2 class="center map-header" id="mapHeader">Where am I gonna get dinner?</h2>
+         <div class="row">
+           <div class="col-6 col-md-3 maps-nav-button">
+             <button onclick="locationCurrentDish()">Restaurant with current dish</button>
+           </div>
+           <div class="col-6 col-md-3 maps-nav-button">
+             <button onclick="nearbyRestaurants()">Nearby Restaurants</button>
+           </div>
+           <div class="col-6 col-md-3 maps-nav-button">
+             <button onclick="nearbyGroceryStores()">Grocery store</button>
+           </div>
+           <div class="col-6 col-md-3 maps-nav-button">
+             <button onclick="currentPosition()">Current position</button>
+           </div>
+         </div>
+         <!--- Google Maps map -->
+         <div id="map">
 
-        </div>
-      </div>
-    </div>
+         </div>
+       </div>
+     </div>
+     <!--- Choose the Country Section -->
+     <div class="row">
+       <div class="col-12 country-header center" id="chooseTheCountry">
+         <h2>Choose the Country!</h2>
+       </div>
+       <div class="col-12 col-md-6 center country-info">
+         <h3>Chinese</h3>
+         <i>Chinese flag</i>
+         <p>some chinese food info China’s “champion eaters” have attracted a dedicated following for their ability to gobble down vast quantities of food. Swallowing eye-popping amounts of fried chicken, instant noodles and hot dogs have made these
+           gluttons internet stars.
+           But this past weekend, China’s state broadcaster departed from its regular programming to expose the hoaxes behind those seemingly insatiable appetites.
+           Pretending to eat while secretly spitting out food, editing hours of footage to appear like a single sitting and vomiting between courses were among the tricks China Central Television revealed.
+           The exposé was part of an intensifying campaign to tackle China’s estimated 18 million tons of annual food waste, enough to feed approximately 40 million people.</p>
+       </div>
+       <div class="col-12 col-md-6 center country-info">
+         <h3>Turkish</h3>
+         <i>Turkish flag</i>
+         <p>Turkish cuisine (Turkish: Türk mutfağı) is largely the heritage of Ottoman cuisine, which can be described as a fusion and refinement of Central Asian, Middle Eastern, Mediterranean, Eastern European and Balkan cuisines. Turkish cuisine
+           has in turn influenced those and other neighbouring cuisines, including those of Southeast Europe (Balkans), Central Europe, and Western Europe. The Ottomans fused various culinary traditions of their realm with influences from Levantine
+           cuisines, Egyptian cuisine, Greek cuisine, Balkan cuisine, along with traditional Turkic elements from Central Asia (such as yogurt and pastırma), creating a vast array of specialities.</p>
+       </div>
+       <div class="col-12 col-md-6 center country-info">
+         <h3>Italian</h3>
+         <i>Italian flag</i>
+         <p>talian cuisine has developed over the centuries. Although the country known as Italy did not unite until the 19th century, the cuisine can claim traceable roots as far back as the 4th century BC. Food and culture were very important at
+           that time as we can see from the cookbook (Apicius) which dates back to first century BC.Through the centuries, neighbouring regions, conquerors, high-profile chefs, political upheaval, and the discovery of the New World have
+           influenced its development. Italian food started to form after the fall of the Roman Empire, when different cities began to separate and form their own traditions. Many different types of bread and pasta were made, and there was a
+           variation in cooking techniques and preparation. The country was split. Regional cuisine is represented by some of the major cities in Italy. For example, Milan (north of Italy) is known for its risottos, Bologna (the central/middle of the
+           country) is known for its tortellini and Naples (the south) is famous for its pizzas and spaghettis.</p>
+       </div>
+       <div class="col-12 col-md-6 center country-info">
+         <h3>Indonesian</h3>
+         <i>Indonesian flag</i>
+         <!--- some coppied text from https://en.wikipedia.org/wiki/Indonesian_cuisine -->
+         <p>Indonesian cuisine is a collection of various regional culinary traditions that formed the archipelagic nation of Indonesia. There are a wide variety of recipes and cuisines in part because Indonesia is composed of approximately 6,000
+           populated islands of the total 17,508 in the world's largest archipelago, with more than 300 ethnic groups calling Indonesia home. Many regional cuisines exist, often based upon indigenous culture with some foreign influences. Indonesia
+           has around 5,350 traditional recipes, with 30 of them considered the most important. Indonesia's cuisine may include rice, noodle and soup dishes in modest local eateries to street-side snacks and top-dollar plates.</p>
+       </div>
+     </div>
+   </main>
+   <script>
+     var map;
+     let randomDish;
+     var markers = [];
+     var request = {}
+     let labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-  </main>
-  <script>
-    var map;
+     function setMapOnAll(map) {
+       for (let i = 0; i < markers.length; i++) {
+         markers[i].setMap(map);
+       }
+     }
 
 
-    function initMap() {
-      var initialLocation;
-      map = new google.maps.Map(document.getElementById('map'));
+     // removes markers from the map
+     function clearMarkers() {
+       setMapOnAll(null);
+     }
 
-      navigator.geolocation.getCurrentPosition(function(position) {
-        // Center on user's current location if geolocation prompt allowed
-        var initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        map.setCenter(initialLocation);
-        map.setZoom(13);
-      }, function(positionError) {
-        // User denied geolocation prompt - default to Rotterdam
-        map.setCenter(new google.maps.LatLng(51.919662988, 4.475331432));
-        map.setZoom(5);
-      });
+     // removes markers form markersarray so the computer forgets them
+     function deleteMarkers() {
+       clearMarkers();
+       markers = [];
+     }
 
-      google.maps.event.addListener(map, 'click', function() {
-        var service;
-        var request = {
-          query: "Chinees",
-          fields: ["name", "geometry"]
-        };
-        service = new google.maps.places.PlacesService(map);
+     function createMarker(place, i) {
+       var marker = new google.maps.Marker({
+         map: map,
+         position: place.geometry.location
+       })
+       markers.push(marker);
+     }
 
-        var labels = "ABCDEFGHIJKLMONPQRSTUVWXYZ";
 
-        service.textSearch(request, function(results, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-              createMarker(results[i]);
-            }
-          }
-        });
+     // this function finds places on the map with a request
+     function locationFinder() {
+       deleteMarkers()
+       var service;
+       service = new google.maps.places.PlacesService(map);
 
-        function createMarker(place, i) {
-          var marker = new google.maps.Marker({
-            map: map,
-            position: place.geometry.location,
-            label: labels[i % labels.length]
-          });
+       service.textSearch(request, function(results, status) {
+         if (status === google.maps.places.PlacesServiceStatus.OK) {
+           for (var i = 0; i < results.length; i++) {
+             createMarker(results[i]);
+           }
+         }
+       });
 
-        }
-      });
-    }
-  </script>
-  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt8K0B1jfbfag5zy0moUQ0xvyx3R--iqc&libraries=places&callback=initMap" type="text/javascript"></script>
-</body>
+     }
 
-</html>
+     // this functions looks for nearby Grocery stores
+     // this function doesn't really work as intended since the word for grocery store changes around the world, however it will find most grocery stores in the area
+
+     function nearbyGroceryStores() {
+       request = {
+         query: "Grocery store",
+         fields: ["name", "geometry"]
+       }
+       locationFinder()
+     }
+
+
+     // this function looks for nearby restaurants
+     function nearbyRestaurants() {
+       request = {
+         query: "Restaurant",
+         fields: ["name", "geometry"]
+       }
+       locationFinder()
+     }
+
+     // this function looks for the current random dish
+     function locationCurrentDish() {
+       if (randomDishObject.mapsSearch == undefined) {
+         alert("Please generate a dish first")
+       } else {
+         request = {
+           query: `${randomDishObject.mapsSearch}`,
+           fields: ["name", "geometry"]
+         }
+         locationFinder()
+       }
+     }
+
+     // this function looks for current user position
+     function currentPosition() {
+       navigator.geolocation.getCurrentPosition(function(position) {
+           // Center on user's current location if geolocation prompt allowed
+           var initialLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+           map.setCenter(initialLocation);
+           map.setZoom(14)
+         },
+         function(positionError) {
+           // User denied geolocation prompt - default to Rotterdam
+           map.setCenter(new google.maps.LatLng(51.9225, 4.47917));
+           map.setZoom(12);
+         });
+     }
+
+     function initMap() {
+       var initialLocation;
+       map = new google.maps.Map(document.getElementById('map'));
+       map.setZoom(13);
+       currentPosition()
+     };
+   </script>
+   <script src="https://kit.fontawesome.com/038155ffd3.js" crossorigin="anonymous"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt8K0B1jfbfag5zy0moUQ0xvyx3R--iqc&libraries=places&callback=initMap"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ </body>
+ </html>
